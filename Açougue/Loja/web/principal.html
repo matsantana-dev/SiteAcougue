@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <center>
+        <h1>
+        <p style="color: #ef9c51;"> A Qualidade que vem do Campo </p> Agora chega até sua Casa. 🥩
+        </h1>
+    </center>
+
+  <div class="carrossel-container">
+    <div class="quadrado"></div>
+    <div class="carossel">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="imagens/oferta_picanha.jpg">
+        </div>
+        <div class="slide">
+          <img src="imagens/frete_gratis.jpg">
+        </div>
+        <div class="slide">
+          <img src="imagens/faca_cadastro.jpg">
+        </div>
+        <div class="quadrado"></div>
+      </div>
+    
+      <div class="indicadores">
+        <span class="indicador" onclick="currentSlide(0)"></span>
+        <span class="indicador" onclick="currentSlide(1)"></span>
+        <span class="indicador" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+  </div>
+    
+    <!----- Script do carrossel ----->
+<script>
+      let currentIndex = 0;
+      let slides = document.getElementById('slides');
+      let indicadores = document.querySelectorAll('.indicador');
+    
+      function showSlide(index) {
+        let slideWidth = document.querySelector('.slide').clientWidth;
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+        indicadores.forEach((indicador, i) => {
+          indicador.classList.toggle('active', i === index);
+        });
+      }
+    
+      function currentSlide(index) {
+        currentIndex = index;
+        showSlide(currentIndex);
+      }
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % indicadores.length;
+        showSlide(currentIndex);
+      }, 5000);
+</script>
+        
+    <footer class="footer">
+        <p>&copy; Feito por Matheus Sant'Ana e Ana Clara - 3° Info - Turma 1</p>
+    </footer>
+    </body>
+</html>
