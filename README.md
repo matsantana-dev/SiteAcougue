@@ -1,2 +1,2 @@
-# SiteAçougue
+# Açougue
 Um site pra venda de carnes e itens similares
