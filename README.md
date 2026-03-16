@@ -9,7 +9,7 @@ O site atualiza conforme o banco de dados, atualizando departamentos e produtos 
 ## Tecnologias utilizadas
 
 - Java (Java Class, Servlets)
-- HTML, CSS, JavaScript
+- HTML, CSS
 - PostgreSQL (Banco de dados)
 - NetBeans (IDE principal)
 - pgAdmin 4 (IDE para gerenciamento do banco de dados)
@@ -38,7 +38,7 @@ Finalize a compra e verifique as informações de confirmação.
 
 ## Arquitetura
 
-O modelo principal é o padrão MVC com divisão nas funções de model, controller e view. O FrontEnd utiliza HTML, CSS e JavaScript para interação, já o BackEnd é feito em Java com Servlets e comunicação com o banco de dados.
+O modelo principal é o padrão MVC com divisão nas funções de model, controller e view. O FrontEnd utiliza HTML e CSS para interação, já o BackEnd é feito em Java com Servlets e comunicação com o banco de dados.
 
 ## Autor
 
